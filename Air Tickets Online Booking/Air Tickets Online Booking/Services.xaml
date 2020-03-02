@@ -1,0 +1,16 @@
+﻿<Window x:Class="Air_Tickets_Online_Booking.Services"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Services" Height="350" Width="525">
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="319" VerticalAlignment="Top" Width="517"/>
+        <Image Source="aircraft-hd-free-high-quality-wallpapers-tablet-download.jpg" Stretch="Fill" Margin="0,165,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="138" TextWrapping="Wrap" Text="We give you ticket booking services for Only Regent airways.At first we take information from you.After then Our Admin Panels select first 52 passangers and give you confirmation message  in your mobile number.You can update your information any time by your mobile number or see your details any time by your mobile number.When you will give information for save make sure that you have given your mobile number.&#xD;&#xA;Thanks for visiting us." VerticalAlignment="Top" Width="517" FontSize="14" Foreground="#FF409357" FontFamily="Segoe UI Semibold" Margin="0,27,0,0"/>
+        <Menu x:Name="menu" Background="#FF409357" Height="26" VerticalAlignment="Top" 
+               
+            >
+            <MenuItem Header="Home" Height="26" Width="78" Foreground="#FF409357" FontSize="16" FontFamily="Segoe UI Black" Background="#FFF7FBF8" Click="home_click"/>
+        </Menu>
+
+    </Grid>
+</Window>

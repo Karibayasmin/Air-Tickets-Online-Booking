@@ -1,0 +1,116 @@
+﻿<Window x:Class="Air_Tickets_Online_Booking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Air_Tickets_Online_Booking"
+        mc:Ignorable="d"
+        Title="Regent Airways" Height="350" Width="525">
+
+    <Grid Margin="0,0,-8,-1">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF801D0E" Offset="1"/>
+                <GradientStop Color="#FFEA3131" Offset="1"/>
+                <GradientStop Color="#FFEA3131" Offset="0.003"/>
+                <GradientStop Color="#FF6E3D21" Offset="0.53"/>
+                <GradientStop Color="#FF5D5B33" Offset="0.682"/>
+                <GradientStop Color="#FF46864F" Offset="0.983"/>
+                <GradientStop Color="#FFE33130" Offset="0.023"/>
+                <GradientStop Color="#FF6E5532" Offset="0.765"/>
+                <GradientStop Color="#FF71361C" Offset="0.821"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="261*"/>
+            <ColumnDefinition Width="257*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Menu x:Name="menu" Background="#FF409357" Grid.ColumnSpan="3" Height="26" VerticalAlignment="Top" 
+               
+            >
+            <MenuItem Header="Home" Height="26" Width="124" Foreground="#FFF7EBEB" FontSize="14"/>
+            <MenuItem Header="Services" Height="26" Width="139" Foreground="#FFF9F1F1" FontSize="14" Click="services_click"/>
+            <MenuItem Header="About Us" Height="26" Width="137" Foreground="#FFF9F3F3" FontSize="14" Click="about_click"/>
+            <MenuItem Header="Admin" Height="24" Width="65" Foreground="#FFF9F3F3" FontSize="14" >
+                <Separator/>
+                <MenuItem Header="Admin Account" Background="#FF409357" Click="myaccount"/>
+            </MenuItem>
+        </Menu>
+        <Label x:Name="label" Content="From" HorizontalAlignment="Left" Height="28" Margin="42,88,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF409357" FontSize="16" FontFamily="Segoe UI Black" Background="#FFFBF7F7"/>
+        <Label x:Name="label1" Content="     To" HorizontalAlignment="Left" Height="29" Margin="42,121,0,0" VerticalAlignment="Top" Width="90" Foreground="#FF409357" FontSize="16" FontFamily="Segoe UI Black" RenderTransformOrigin="0.512,0.293" Background="#FFFBFAFA"/>
+        <ComboBox x:Name="from" Height="19" Margin="137,88,10,0" VerticalAlignment="Top" RenderTransformOrigin="0.522,0.629">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFF9F3F3" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Dhaka" />
+            <ComboBoxItem Content="Jessore"/>
+            <ComboBoxItem Content="Barisal"/>
+            <ComboBoxItem Content="Chittagong"/>
+            <ComboBoxItem Content="Cox's Bazar"/>
+            <ComboBoxItem Content="Rajshahi"/>
+            <ComboBoxItem Content="Sylhet"/>
+            <ComboBoxItem Content="Saidpur"/>
+        </ComboBox>
+        <ComboBox x:Name="to" Height="21" Margin="137,121,10,0" VerticalAlignment="Top">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFFDF9F9" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Dhaka"/>
+            <ComboBoxItem Content="Jessore"/>
+            <ComboBoxItem Content="Barisal" />
+            <ComboBoxItem Content="Chittagong" />
+            <ComboBoxItem Content="Cox's Bazar"/>
+            <ComboBoxItem Content="Rajshahi" />
+            <ComboBoxItem Content="Sylhet" />
+            <ComboBoxItem Content="Saidpur" />
+        </ComboBox>
+        <Button x:Name="save" Content="Save" HorizontalAlignment="Left" Height="30" Margin="165,256,0,0" VerticalAlignment="Top" Width="86" Click="save_Click" Background="#FFF5EFEF"/>
+        <Label Content="Departing on" HorizontalAlignment="Left" Margin="0,155,0,0" VerticalAlignment="Top" Height="30" Width="132" FontFamily="Segoe UI Black" Foreground="#FF409357" FontSize="14" Background="White"/>
+        <Label Content="Regent Airways" HorizontalAlignment="Left" Margin="179,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="36" Width="153" FontFamily="Impact" FontSize="22" Foreground="#FF409357" Background="#FFFFFCFC"/>
+        <ComboBox x:Name="departing_on" HorizontalAlignment="Left" Margin="137,155,0,0" VerticalAlignment="Top" Width="114">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFF7F5F5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="7am"/>
+            <ComboBoxItem Content="7pm"/>
+            <ComboBoxItem Content="6am"/>
+            <ComboBoxItem Content="6pm"/>
+            
+            </ComboBox>
+        <Label Content="Num of Ticket" HorizontalAlignment="Left" Margin="0,190,0,0" VerticalAlignment="Top" Width="132" Height="27" Foreground="#FF409357" FontSize="14" FontFamily="Segoe UI Black" Background="White"/>
+        <Label Content="Customer Name" HorizontalAlignment="Left" Margin="1,222,0,0" VerticalAlignment="Top" Width="131" FontSize="14" FontFamily="Segoe UI Black" Foreground="#FF409357" Background="#FFFBF8F8"/>
+        <TextBox x:Name="customer_name" HorizontalAlignment="Left" Height="29" Margin="137,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Background="#FFFFFCFC"/>
+        <Label Content="Mobile Number" HorizontalAlignment="Left" Height="30" Margin="0,88,0,0" VerticalAlignment="Top" Width="125" Background="#FFFBFAFA" Foreground="#FF409357" FontFamily="Segoe UI Black" FontSize="14" Grid.Column="1"/>
+        <TextBox x:Name="mobile_number" HorizontalAlignment="Left" Height="30" Margin="133,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Foreground="#FF409357" FontSize="14" FontFamily="Segoe UI Black" Grid.Column="1"/>
+       
+        <TextBlock x:Name="txt_block" HorizontalAlignment="Left" Height="120" Margin="0,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="247" Background="#FFF9F1F1" Grid.Column="1"/>
+        <Button x:Name="refresh" Content="REFRESH" HorizontalAlignment="Left" Height="30" Margin="0,256,0,0" VerticalAlignment="Top" Width="60" Click="refresh_click" Grid.Column="1"/>
+        <Button x:Name="update" Content="UPDATE" HorizontalAlignment="Left" Height="30" Margin="65,256,0,0" VerticalAlignment="Top" Width="60" Click="update_click" Grid.Column="1"/>
+        <Button x:Name="delete" Content="DELETE" HorizontalAlignment="Left" Height="30" Margin="130,256,0,0" VerticalAlignment="Top" Width="51" Click="delete_click" Grid.Column="1"/>
+        <Button x:Name="search" Content="Search" HorizontalAlignment="Left" Height="30" Margin="186,256,0,0" VerticalAlignment="Top" Width="61" Click="search_click" Grid.Column="1"/>
+        <ComboBox x:Name="ticket_num1" HorizontalAlignment="Left" Height="24" Margin="137,190,0,0" VerticalAlignment="Top" Width="114">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="2"/>
+            <ComboBoxItem Content="3"/>
+            <ComboBoxItem Content="4"/>
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+            <ComboBoxItem Content="10"/>
+        </ComboBox>
+
+
+    </Grid>
+</Window>
